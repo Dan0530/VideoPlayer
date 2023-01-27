@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- digito--HTML:5 luego abrir archivo, abrir aplicativo live server para
+actualizar web-->
+<html lang="es">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoPlayer Dangelo</title> <!-- TITULO EN EL NAVEGADOR -->
+    <link rel="stylesheet" href="./CCS/styles.css"> <!-- enlazar a css -->
+    
+</head>
+<body>
+    <div class="wrapper">
+        <div class="player"> <!-- Empaquetador o contenedor COMPONENTE DIV CLASE PLAYER GO STULESS.CSS -->
+            <VIdeo id="video" poster="./images/poster.jpg" src="./videos/lofi.mp4" width="900"></VIdeo>    
+            <div class="player-overlay"> <!--desaparecer botones y barra con puntero -->
+                <h2 class="player-title">Musica para programar</h2>
+                <div class="player-actions">
+                <button class="button" id="backward" aria-label="Retroceder 10seg" title="Retroceder 10seg"></button> <!-- Selectores de clase y de ID-->
+                <!-- Id para diferenciar, a un elemento unico por pagina, 1 solo atributo,
+                las clases se puede repetir, sin recurir a la etiqueta de boton -->
+                <button class="button" id="forward" aria-label="Avanzar 10seg" title="Avanzar 10seg"></button> 
+                <button class="button" id="play" aria-label="Reproducir" title="Reproducir"></button>
+                <button class="button" hidden id="pause" aria-label="Pausar" title="Pausar"></button> <!-- no se ve el boton -->
+            </div>  
+            <div class="player-progress">  <!--barra de avance PARA IR A CSS A ESTILIZARLO -->
+                <input id="progress" type="range" min="0" step="1" value="0"> <!--barra de avance JS AVANZAR-->
+            </div>
+        </div>
+
+<!--<VIdeo id="video" controls autoplay muted src="./videos/lofi.mp4" width="200"></VIdeo> 
+ ---- Botones del reprodcutor, Reproducir, silencio, Video, Ancho en el navegador -->
+        </div>
+    </div>
+<!-- JS EN HTML -->
+<script src="./js/index.js"></script>
+
+</body>
+</html> 
+
+
